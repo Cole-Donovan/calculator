@@ -2,16 +2,16 @@
 body {
     background-color: #e3e3e3;
     color: #e3e3e3;
-    padding-top: 10px;
     font-family: Arial, sans-serif;
 }
 
 #title {
     color: #233142;
     text-align: center;
-    padding-bottom: 10px;
+    font-size: 60px;
 }
 
+/* contains display and buttons */
 #calculator-container {
     display: flex;
     flex: 1 1 auto;
@@ -25,20 +25,25 @@ body {
     flex-direction: column;
     padding-top: 10px;
     padding-bottom: 10px;
+    border: 3px solid #1d2938;
 }
 
+/* where output is displayed */
 #display-container {
+    font-weight: bold;
     background-color: #455d7a;
     height: 120px;
     width: 440px;
     border-radius: 30px;
     margin: 20px;
-    font-size: 70px;
+    font-size: 60px;
     padding: 20px;
     box-sizing: border-box;
+    border: 3px solid #1d2938;
     text-align: right;
 }
 
+/* used for 5 rows of buttons */
 .row-container {
     height: 110px;
     width: 460px;
@@ -49,27 +54,23 @@ body {
 }
 
 .button-box {
+    border: 3px solid #912c2c;
     background-color: #f95959;
     color: #e3e3e3;
-    border: none;
     border-radius: 30px;
     height: auto;
     flex: 1 0 0;
-    font-size: 40px;
+    font-size: 38px;
     margin-right: 20px;
 }
 
+/* overrides button color to grey */
 .grey {
     background-color: #455d7a !important;
+    border: 3px solid #1d2938;
 }
 
-#zero-button {
-    background-color: #f95959;
-    color: #e3e3e3;
-    border: none;
-    border-radius: 30px;
-    height: auto;
-    font-size: 40px;
-    margin-right: 20px;
-    width: 210px;
+/* zero is bigger than other buttons */
+.zero-button {
+    flex-grow: 2.5;
 }
