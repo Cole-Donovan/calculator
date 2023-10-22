@@ -30,13 +30,12 @@ body {
 
 /* where output is displayed */
 #display-container {
-    font-weight: bold;
     background-color: #455d7a;
-    height: 120px;
+    height: 130px;
     width: 440px;
     border-radius: 30px;
     margin: 20px;
-    font-size: 60px;
+    font-size: 35px;
     padding: 20px;
     box-sizing: border-box;
     border: 3px solid #1d2938;
@@ -56,6 +55,7 @@ body {
 .button-box {
     border: 3px solid #912c2c;
     background-color: #f95959;
+    
     color: #e3e3e3;
     border-radius: 30px;
     height: auto;
@@ -66,7 +66,7 @@ body {
 
 /* overrides button color to grey */
 .grey {
-    background-color: #455d7a !important;
+    background-color: #455d7a;
     border: 3px solid #1d2938;
 }
 
