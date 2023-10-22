@@ -243,12 +243,12 @@ function decimalButton() {
 
 // red buttons: four functions, equal, clearing, delete, negative/positive
 function clearButton() {
-currentValue = 'empty';
-displayVar.textContent = '0';
-savedValue = 'empty';
-whichFunction = 'empty';
-answer = 'empty';
-prevWasEqual == false;
+    currentValue = 'empty';
+    displayVar.textContent = '0';
+    savedValue = 'empty';
+    whichFunction = 'empty';
+    answer = 'empty';
+    prevWasEqual == false;
 }
 function deleteButton() {
     if(!isNaN(currentValue) && currentValue != '0') {
@@ -277,6 +277,15 @@ let currentFunctionType = 0;
 function contingency(currentFunctionType) {
     if(whichFunction != currentFunctionType && whichFunction > 0) {
         if(whichFunction == 1) {
+            if(currentValue == 0) {
+                displayVar.textContent = 'Cannot divide by zero!';
+                currentValue = 'empty';
+                savedValue = 'empty';
+                whichFunction = 'empty';
+                answer = 'empty';
+                prevWasEqual == false;
+                return;
+            }
             savedValue = parseFloat(savedValue) / parseFloat(currentValue);
             currentValue = 'empty';
         }
@@ -325,6 +334,15 @@ function divideButton() {
             whichFunction = 1;
         }
         else {
+            if(currentValue == 0) {
+                displayVar.textContent = 'Cannot divide by zero!';
+                currentValue = 'empty';
+                savedValue = 'empty';
+                whichFunction = 'empty';
+                answer = 'empty';
+                prevWasEqual == false;
+                return;
+            }
             answer = parseFloat(savedValue) / parseFloat(currentValue);
             savedValue = answer;
             currentValue = 'empty';
@@ -440,6 +458,15 @@ function plusButton() {
 }
 function equalButton() {
     if(whichFunction == 1) {
+        if(currentValue == '0') {
+            displayVar.textContent = 'Cannot divide by zero!';
+            currentValue = 'empty';
+            savedValue = 'empty';
+            whichFunction = 'empty';
+            answer = 'empty';
+            prevWasEqual == false;
+            return;
+        }
         answer = parseFloat(savedValue) / parseFloat(currentValue);
         savedValue = answer;
         currentValue = 'empty';
